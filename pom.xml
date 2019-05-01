@@ -11,8 +11,8 @@
     <packaging>jar</packaging>
 
     <properties>
-        <elasticsearch.version>5.2.2</elasticsearch.version>
-        <lucene.version>6.4.1</lucene.version>
+        <elasticsearch.version>6.7.0</elasticsearch.version>
+        <lucene.version>7.7.0</lucene.version>
     </properties>
 
     <dependencies>
@@ -41,6 +41,12 @@
             <scope>test</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.11.1</version>
+        </dependency>
     </dependencies>
 
     <build>

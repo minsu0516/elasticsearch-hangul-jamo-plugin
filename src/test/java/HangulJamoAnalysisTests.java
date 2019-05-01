@@ -30,7 +30,7 @@ public class HangulJamoAnalysisTests extends ESTestCase {
         assertTrue(tokenFilter instanceof HangulJamoTokenFilterFactory);
 
         String source = "사랑하는 사람들.,!";
-        String[] expected = new String[]{"ㅅㅏㄹㅏㅇㅎㅏㄴㅡㄴ", "ㅅㅏㄹㅁㄷㅡㄹ"};
+        String[] expected = new String[]{"ㅅㅏㄹㅏㅇㅎㅏㄴㅡㄴ", "ㅅㅏㄹㅏㅁㄷㅡㄹ"};
         Tokenizer tokenizer = new StandardTokenizer();
         tokenizer.setReader(new StringReader(source));
         assertSimpleTSOutput(tokenFilter.create(tokenizer), expected);
