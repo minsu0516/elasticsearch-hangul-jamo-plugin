@@ -1,5 +1,6 @@
-curl -XDELETE '127.0.0.1:9222/test_jamo'
-curl -XPUT '127.0.0.1:9222/test_jamo' -d '{
+curl -XDELETE '127.0.0.1:9200/test_jamo'
+curl -XPUT '127.0.0.1:9200/test_jamo' -H 'Content-Type: application/json'
+ -d '{
   "settings" : {
     "analysis": {
       "tokenizer" : {
@@ -27,4 +28,4 @@ curl -XPUT '127.0.0.1:9222/test_jamo' -d '{
   }
 }'
 
-curl '127.0.0.1:9222/test_jamo/_analyze?pretty=1&analyzer=hangul_jamo_analyzer' -d '아버지가 방에 들어가신다. 태권-V'
+curl '127.0.0.1:9200/test_jamo/_analyze?pretty=1&analyzer=hangul_jamo_analyzer' -d '아버지가 방에 들어가신다. 태권-V'

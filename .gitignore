@@ -1,2 +1,4 @@
 .idea/
 elasticsearch-hangul-jamo-plugin.iml
+*.iml
+.target/
