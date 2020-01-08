@@ -2,3 +2,4 @@
 elasticsearch-hangul-jamo-plugin.iml
 *.iml
 .target/
+/target/
